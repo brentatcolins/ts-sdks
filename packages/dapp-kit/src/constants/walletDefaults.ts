@@ -6,7 +6,7 @@ import { STASHED_WALLET_NAME } from '@onelabs/zksend';
 
 import { createInMemoryStore } from '../utils/stateStorage.js';
 
-export const SUI_WALLET_NAME = 'Sui Wallet';
+export const SUI_WALLET_NAME = 'OneWallet';
 
 export const DEFAULT_STORAGE =
 	typeof window !== 'undefined' && window.localStorage ? localStorage : createInMemoryStore();

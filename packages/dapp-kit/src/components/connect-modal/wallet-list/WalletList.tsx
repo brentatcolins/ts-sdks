@@ -35,7 +35,7 @@ export function WalletList({
 				))
 			) : (
 				<WalletListItem
-					name="Sui Wallet"
+					name="OneWallet"
 					icon={<SuiIcon />}
 					onClick={onPlaceholderClick}
 					isSelected
