@@ -273,7 +273,7 @@ export function moveDataToRpcContent(data: MoveData, layout: MoveTypeLayout): Mo
 			result[name] = moveDataToRpcContent(item.value, itemLayout);
 		});
 
-		// https://github.com/MystenLabs/sui/blob/5849f6845a3ab9fdb4c17523994adad461478a4c/crates/sui-json-rpc-types/src/sui_move.rs#L481
+		// https://github.com/one-chain-labs/onechain/blob/5849f6845a3ab9fdb4c17523994adad461478a4c/crates/sui-json-rpc-types/src/sui_move.rs#L481
 		const tag = parseStructTag(layout.struct.type);
 		const structName = `${toShortTypeString(tag.address)}::${tag.module}::${tag.name}`;
 

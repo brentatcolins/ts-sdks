@@ -178,7 +178,7 @@ export type Address = IOwner & {
   /** Objects owned by this address, optionally `filter`-ed. */
   objects: MoveObjectConnection;
   /** The `0x3::staking_pool::StakedSui` objects owned by this address. */
-  stakedSuis: StakedSuiConnection;
+  stakedOcts: StakedSuiConnection;
   /**
    * The SuinsRegistration NFTs owned by this address. These grant the owner the capability to
    * manage the associated domain.
@@ -689,7 +689,7 @@ export type Coin = IMoveObject & IObject & IOwner & {
    */
   receivedTransactionBlocks: TransactionBlockConnection;
   /** The `0x3::staking_pool::StakedSui` objects owned by this object. */
-  stakedSuis: StakedSuiConnection;
+  stakedOcts: StakedSuiConnection;
   /**
    * The current status of the object as read from the off-chain store. The possible states are:
    * NOT_INDEXED, the object is loaded from serialized data, such as the contents of a genesis or
@@ -933,7 +933,7 @@ export type CoinMetadata = IMoveObject & IObject & IOwner & {
    */
   receivedTransactionBlocks: TransactionBlockConnection;
   /** The `0x3::staking_pool::StakedSui` objects owned by this object. */
-  stakedSuis: StakedSuiConnection;
+  stakedOcts: StakedSuiConnection;
   /**
    * The current status of the object as read from the off-chain store. The possible states are:
    * NOT_INDEXED, the object is loaded from serialized data, such as the contents of a genesis or
@@ -1753,7 +1753,7 @@ export type IOwner = {
   /** Objects owned by this object or address, optionally `filter`-ed. */
   objects: MoveObjectConnection;
   /** The `0x3::staking_pool::StakedSui` objects owned by this object or address. */
-  stakedSuis: StakedSuiConnection;
+  stakedOcts: StakedSuiConnection;
   /** The SuinsRegistration NFTs owned by this object or address. These grant the owner the capability to manage the associated domain. */
   suinsRegistrations: SuinsRegistrationConnection;
 };
@@ -2335,7 +2335,7 @@ export type MoveObject = IMoveObject & IObject & IOwner & {
    */
   receivedTransactionBlocks: TransactionBlockConnection;
   /** The `0x3::staking_pool::StakedSui` objects owned by this object. */
-  stakedSuis: StakedSuiConnection;
+  stakedOcts: StakedSuiConnection;
   /**
    * The current status of the object as read from the off-chain store. The possible states are:
    * NOT_INDEXED, the object is loaded from serialized data, such as the contents of a genesis or
@@ -2616,7 +2616,7 @@ export type MovePackage = IObject & IOwner & {
    * Note that objects owned by a package are inaccessible, because packages are immutable and
    * cannot be owned by an address.
    */
-  stakedSuis: StakedSuiConnection;
+  stakedOcts: StakedSuiConnection;
   /**
    * The current status of the object as read from the off-chain store. The possible states are:
    * NOT_INDEXED, the object is loaded from serialized data, such as the contents of a genesis or
@@ -3061,7 +3061,7 @@ export type Object = IObject & IOwner & {
    */
   receivedTransactionBlocks: TransactionBlockConnection;
   /** The `0x3::staking_pool::StakedSui` objects owned by this object. */
-  stakedSuis: StakedSuiConnection;
+  stakedOcts: StakedSuiConnection;
   /**
    * The current status of the object as read from the off-chain store. The possible states are:
    * NOT_INDEXED, the object is loaded from serialized data, such as the contents of a genesis or
@@ -3404,7 +3404,7 @@ export type Owner = IOwner & {
   /** Objects owned by this object or address, optionally `filter`-ed. */
   objects: MoveObjectConnection;
   /** The `0x3::staking_pool::StakedSui` objects owned by this object or address. */
-  stakedSuis: StakedSuiConnection;
+  stakedOcts: StakedSuiConnection;
   /**
    * The SuinsRegistration NFTs owned by this object or address. These grant the owner the
    * capability to manage the associated domain.
@@ -4418,7 +4418,7 @@ export type StakedSui = IMoveObject & IObject & IOwner & {
   /** A stake can be pending, active, or unstaked */
   stakeStatus: StakeStatus;
   /** The `0x3::staking_pool::StakedSui` objects owned by this object. */
-  stakedSuis: StakedSuiConnection;
+  stakedOcts: StakedSuiConnection;
   /**
    * The current status of the object as read from the off-chain store. The possible states are:
    * NOT_INDEXED, the object is loaded from serialized data, such as the contents of a genesis or
@@ -4665,7 +4665,7 @@ export type SuinsRegistration = IMoveObject & IObject & IOwner & {
    */
   receivedTransactionBlocks: TransactionBlockConnection;
   /** The `0x3::staking_pool::StakedSui` objects owned by this object. */
-  stakedSuis: StakedSuiConnection;
+  stakedOcts: StakedSuiConnection;
   /**
    * The current status of the object as read from the off-chain store. The possible states are:
    * NOT_INDEXED, the object is loaded from serialized data, such as the contents of a genesis or
@@ -5693,7 +5693,7 @@ export type GetStakesQueryVariables = Exact<{
 }>;
 
 
-export type GetStakesQuery = { __typename?: 'Query', address?: { __typename?: 'Address', stakedSuis: { __typename?: 'StakedSuiConnection', pageInfo: { __typename?: 'PageInfo', hasNextPage: boolean, endCursor?: string | null }, nodes: Array<{ __typename?: 'StakedSui', principal?: any | null, stakeStatus: StakeStatus, address: any, estimatedReward?: any | null, activatedEpoch?: { __typename?: 'Epoch', epochId: any, referenceGasPrice?: any | null } | null, requestedEpoch?: { __typename?: 'Epoch', epochId: any } | null, contents?: { __typename?: 'MoveValue', json: any } | null }> } } | null };
+export type GetStakesQuery = { __typename?: 'Query', address?: { __typename?: 'Address', stakedOcts: { __typename?: 'StakedSuiConnection', pageInfo: { __typename?: 'PageInfo', hasNextPage: boolean, endCursor?: string | null }, nodes: Array<{ __typename?: 'StakedSui', principal?: any | null, stakeStatus: StakeStatus, address: any, estimatedReward?: any | null, activatedEpoch?: { __typename?: 'Epoch', epochId: any, referenceGasPrice?: any | null } | null, requestedEpoch?: { __typename?: 'Epoch', epochId: any } | null, contents?: { __typename?: 'MoveValue', json: any } | null }> } } | null };
 
 export type GetStakesByIdsQueryVariables = Exact<{
   ids: Array<Scalars['SuiAddress']['input']> | Scalars['SuiAddress']['input'];
@@ -8214,7 +8214,7 @@ export const QueryEventsDocument = new TypedDocumentString(`
 export const GetStakesDocument = new TypedDocumentString(`
     query getStakes($owner: SuiAddress!, $limit: Int, $cursor: String) {
   address(address: $owner) {
-    stakedSuis(first: $limit, after: $cursor) {
+    stakedOcts(first: $limit, after: $cursor) {
       pageInfo {
         hasNextPage
         endCursor

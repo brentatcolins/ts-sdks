@@ -746,7 +746,7 @@
   to be available in this release (with deprecation warnings). With the large number of deprecations
   there may be functionality that should be moved into the new modular version of the SDK. If you
   find there are features that were deprecated without a suitable replacement, we have created a
-  [Github Discussion thread](https://github.com/MystenLabs/sui/discussions/13150) to track those
+  [Github Discussion thread](https://github.com/one-chain-labs/onechain/discussions/13150) to track those
   use-cases.
 
   #### Migrating imports

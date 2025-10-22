@@ -394,7 +394,7 @@ const introspection = {
             "isDeprecated": false
           },
           {
-            "name": "stakedSuis",
+            "name": "stakedOcts",
             "type": {
               "kind": "NON_NULL",
               "ofType": {
@@ -1910,7 +1910,7 @@ const introspection = {
             "isDeprecated": false
           },
           {
-            "name": "stakedSuis",
+            "name": "stakedOcts",
             "type": {
               "kind": "NON_NULL",
               "ofType": {
@@ -2574,7 +2574,7 @@ const introspection = {
             "isDeprecated": false
           },
           {
-            "name": "stakedSuis",
+            "name": "stakedOcts",
             "type": {
               "kind": "NON_NULL",
               "ofType": {
@@ -4846,7 +4846,7 @@ const introspection = {
             "isDeprecated": false
           },
           {
-            "name": "stakedSuis",
+            "name": "stakedOcts",
             "type": {
               "kind": "NON_NULL",
               "ofType": {
@@ -6695,7 +6695,7 @@ const introspection = {
             "isDeprecated": false
           },
           {
-            "name": "stakedSuis",
+            "name": "stakedOcts",
             "type": {
               "kind": "NON_NULL",
               "ofType": {
@@ -7361,7 +7361,7 @@ const introspection = {
             "isDeprecated": false
           },
           {
-            "name": "stakedSuis",
+            "name": "stakedOcts",
             "type": {
               "kind": "NON_NULL",
               "ofType": {
@@ -8409,7 +8409,7 @@ const introspection = {
             "isDeprecated": false
           },
           {
-            "name": "stakedSuis",
+            "name": "stakedOcts",
             "type": {
               "kind": "NON_NULL",
               "ofType": {
@@ -9274,7 +9274,7 @@ const introspection = {
             "isDeprecated": false
           },
           {
-            "name": "stakedSuis",
+            "name": "stakedOcts",
             "type": {
               "kind": "NON_NULL",
               "ofType": {
@@ -11879,7 +11879,7 @@ const introspection = {
             "isDeprecated": false
           },
           {
-            "name": "stakedSuis",
+            "name": "stakedOcts",
             "type": {
               "kind": "NON_NULL",
               "ofType": {
@@ -12552,7 +12552,7 @@ const introspection = {
             "isDeprecated": false
           },
           {
-            "name": "stakedSuis",
+            "name": "stakedOcts",
             "type": {
               "kind": "NON_NULL",
               "ofType": {

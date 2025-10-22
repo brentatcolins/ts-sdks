@@ -1,18 +1,18 @@
-# Sui dApp Kit
+# OneChain dApp Kit
 
-The Sui dApp Kit is a set of React components, hooks, and utilities that make it easy to build a
-dApp for the Sui ecosystem. It provides hooks and components for querying data from the Sui
-blockchain, and connecting to Sui wallets.
+The OneChain dApp Kit is a set of React components, hooks, and utilities that make it easy to build a
+dApp for the OneChain ecosystem. It provides hooks and components for querying data from the OneChain
+blockchain, and connecting to OneChain wallets.
 
-See https://sdk.mystenlabs.com/typescript for full documentation
+See https://doc-testnet.onelabs.cc/typescript for full documentation
 
 ### Core Features
 
-- **Query Hooks:** dApp Kit provides a set of hooks for making rpc calls to the Sui blockchain,
+- **Query Hooks:** dApp Kit provides a set of hooks for making rpc calls to the OneChain blockchain,
   making it easy to load any information needed for your dApp.
 - **Automatic Wallet State Management:** dApp Kit removes the complexity of state management related
   to wallet connections. You can focus on building your dApp.
-- **Supports all Sui wallets:** No need to manually define wallets you support. All Sui wallets are
+- **Supports all OneChain wallets:** No need to manually define wallets you support. All OneChain wallets are
   automatically supported.
 - **Easy to integrate:** dApp Kit provides pre-built React Components that you can drop right into
   your dApp, for easier integration
@@ -21,10 +21,10 @@ See https://sdk.mystenlabs.com/typescript for full documentation
 
 ## Install from NPM
 
-To use the Sui dApp Kit in your project, run the following command in your project root:
+To use the OneChain dApp Kit in your project, run the following command in your project root:
 
 ```sh npm2yarn
-npm i --save @onelabs/dapp-kit @onelabs/sui @tanstack/react-query
+npm i --save @onelabs/dapp-kit @onelabs/OneChain @tanstack/react-query
 ```
 
 ## Setting up providers
@@ -34,8 +34,8 @@ providers. The props available on the providers are covered in more detail in th
 pages.
 
 ```tsx
-import { createNetworkConfig, SuiClientProvider, WalletProvider } from '@onelabs/dapp-kit';
-import { getFullnodeUrl, type SuiClientOptions } from '@onelabs/sui/client';
+import { createNetworkConfig, OneChainClientProvider, WalletProvider } from '@onelabs/dapp-kit';
+import { getFullnodeUrl, type OneChainClientOptions } from '@onelabs/OneChain/client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // Config options for the networks you want to connect to
@@ -48,11 +48,11 @@ const queryClient = new QueryClient();
 function App() {
 	return (
 		<QueryClientProvider client={queryClient}>
-			<SuiClientProvider networks={networkConfig} defaultNetwork="localnet">
+			<OneChainClientProvider networks={networkConfig} defaultNetwork="localnet">
 				<WalletProvider>
 					<YourApp />
 				</WalletProvider>
-			</SuiClientProvider>
+			</OneChainClientProvider>
 		</QueryClientProvider>
 	);
 }
@@ -75,16 +75,16 @@ import '@onelabs/dapp-kit/dist/index.css';
 
 ## Using hooks to make RPC calls
 
-The dApp Kit provides a set of hooks for making RPC calls to the Sui blockchain. The hooks are thin
+The dApp Kit provides a set of hooks for making RPC calls to the OneChain blockchain. The hooks are thin
 wrappers around `useQuery` from `@tanstack/react-query`. For more comprehensive documentation on how
 these query hooks can be used, check out the
 [react-query docs](https://tanstack.com/query/latest/docs/react/overview).
 
 ```tsx
-import { useSuiClientQuery } from '@onelabs/dapp-kit';
+import { useOneChainClientQuery } from '@onelabs/dapp-kit';
 
 function MyComponent() {
-	const { data, isPending, error, refetch } = useSuiClientQuery('getOwnedObjects', {
+	const { data, isPending, error, refetch } = useOneChainClientQuery('getOwnedObjects', {
 		owner: '0x123',
 	});
 

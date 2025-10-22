@@ -742,7 +742,7 @@ export const RPC_METHODS: {
 					owner,
 				},
 			},
-			(data) => data.address?.stakedSuis?.nodes,
+			(data) => data.address?.stakedOcts?.nodes,
 		);
 
 		return mapGraphQLStakeToRpcStake(stakes);

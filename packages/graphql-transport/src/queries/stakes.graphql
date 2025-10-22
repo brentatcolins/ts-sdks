@@ -3,7 +3,7 @@
 
 query getStakes($owner: SuiAddress!, $limit: Int, $cursor: String) {
 	address(address: $owner) {
-		stakedSuis(first: $limit, after: $cursor) {
+		stakedOcts(first: $limit, after: $cursor) {
 			pageInfo {
 				hasNextPage
 				endCursor
