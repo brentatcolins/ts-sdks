@@ -7,6 +7,7 @@ import { getWalletUniqueIdentifier } from '../../../utils/walletUtils.js';
 import { SuiIcon } from '../../icons/SuiIcon.js';
 import * as styles from './WalletList.css.js';
 import { WalletListItem } from './WalletListItem.js';
+import { SUI_WALLET_NAME } from '../../../constants/walletDefaults.js';
 
 type WalletListProps = {
 	selectedWalletName?: string;
@@ -23,7 +24,7 @@ export function WalletList({
 }: WalletListProps) {
 	return (
 		<ul className={styles.container}>
-			{wallets.length > 0 ? (
+			{wallets.length > 0 && (
 				wallets.map((wallet) => (
 					<WalletListItem
 						key={getWalletUniqueIdentifier(wallet)}
@@ -33,14 +34,17 @@ export function WalletList({
 						onClick={() => onSelect(wallet)}
 					/>
 				))
-			) : (
-				<WalletListItem
-					name="OneWallet"
-					icon={<SuiIcon />}
-					onClick={onPlaceholderClick}
-					isSelected
-				/>
 			)}
+			{
+				(wallets.length === 0 || !wallets.some(wallet => wallet.name === SUI_WALLET_NAME)) && (
+					<WalletListItem
+						name="OneWallet"
+						icon={<SuiIcon />}
+						onClick={onPlaceholderClick}
+						isSelected
+					/>
+				)
+			}
 		</ul>
 	);
 }
